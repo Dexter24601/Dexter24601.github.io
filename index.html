@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <configuration>
+        <system.webServer>
+            <staticContent>
+                <mimeMap fileExtension=".mp4" mimeType="video/mp4" />                   
+            </staticContent>
+         </system.webServer>
+    </configuration>
+    <div>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </div>
+    <div>
+
+        <title>Dexter - main</title>
+
+    </div>
+    <div>
+        <!-- <link rel="stylesheet" type="text/css" href="/my.journy/FullStack/Frontend/CSS/dexter_style.css"> -->
+        <link rel="icon" type="image/png" href="https://cdn.iconscout.com/icon/premium/png-512-thumb/dexter-563897.png" sizes="32*32"> 
+        <script src="https://kit.fontawesome.com/3f311bfd4e.js" crossorigin="anonymous"></script>
+
+        <div>
+        <style>
+
+        .wlc{
+
+            position: relative;
+            top:80px;
+        }
+
+
+        p  {
+
+            font-family: cursive;
+            font-size: 20px;
+            font-weight: bolder;
+            font-style: normal  ;
+            }
+        body {
+            background-color: darkslateblue;
+        }
+
+        .space {
+            margin-bottom: 120px;
+        }
+
+        .login-form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 50px 50px;
+         color: #fff;
+         background:mediumslateblue;
+         border-radius: 20px;
+         border-style: solid;
+         border-color: #fff;
+         border-width: 3px;
+      }
+      button{
+          size: 20px ;
+          background-color: rgb(0, 132, 255);
+          padding: 10px 20px;
+          font-size: 17px;
+          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-weight: 700;
+      }
+      .mid {
+          display: flex;
+          flex-direction: column;
+          align-items: center;  
+      }
+       
+      .searchbar {
+        border-style: solid;
+        border-width: 3px;
+        border-color: gray;
+        border-radius: 20px;
+        padding: 5px 100px 5px 10px;
+        margin: 0px 100px 0px 100px;
+        font-family: cursive;
+        font-size: 20px;
+        width: 80%;
+        position: fixed;
+        top: 10px;
+
+    }
+
+    .searchbutton {
+       display:inline-block;
+        margin-left: -155px;
+        margin-top: 20px;
+        /* position: relative; */
+        /* height: 64px;
+        width: 64px; */
+        background-color:  transparent;
+        align-items: center;
+        color: #000;
+       border-style: solid;
+        border-radius: 20px;
+        border-color:transparent;  
+        padding: 13px; 
+        position: fixed;
+        left: 2030px;
+        top: -14px;
+
+            
+    }
+    /* .searchbar ,.searchbutton {
+        position:fixed;
+    } */
+
+    .searchbutton:hover{
+        
+        
+        color:rgb(0, 132, 255);
+    }
+
+    .searchbutton:active{
+        
+        color:rgb(0, 192, 220);
+    }
+      #loginbg {
+    background-image: url("https://www.dodea.edu/Offices/IT/images/geometric-blue-header.jpg");
+    }   
+      
+      .logos {
+        display: inline 
+      }
+
+      .icon:hover {
+          width: 64px;
+          height: 64px;
+      }
+      footer {
+          background-color: mediumslateblue;
+      }
+      .input {
+        border-radius: 20px;
+        border-style: solid;
+       border-color:dimgray;
+       border-width: 2px;
+      }
+      .inline {
+          display: inline-flex;
+      }
+      .link {
+          color: aqua;
+      }
+      .link:hover {
+        color: blue;
+      }
+      .link:visited {
+          color: crimson;
+      }
+      .link:active {
+          color: steelblue;
+      }
+        </style>
+    </div>
+    
+
+</head>
+
+<body>
+    <header>
+
+    <div>
+            <div class="space">
+                <h1 style="font-family: cursive ,'Arial Narrow', Arial; font-size: 40px;">
+                                                                        <strong class="login-form wlc">    Welcome!</strong>
+                </h1>
+            </div>
+            <div class=""> 
+
+                <input class="searchbar"  type="text" placeholder="What are you looking for?" title="search" name="search"> 
+               
+                <button type="submit" class="searchbutton"> 
+                    <i class="fa fa-search"></i>
+                
+                </button>
+            </div>
+            <br><br><br>
+                <hr>
+                <h2 style="font-size: 27px; color: gray;"> <strong>
+introduction: </strong></h2>
+<p > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid praesentium repudiandae porro quidem, 
+commodi veniam tempore veritatis? Deleniti maxime possimus est itaque corporis suscipit? Soluta inventore quas nulla explicabo consequuntur.
+               <br>
+               <a class="link" href="https://www.xdexter.000webhostapp.com" target="_blank">https://www.xdexter.000webhostapp.com</a>
+
+</p>
+                <br>
+        </div>    
+    </header>
+<hr> <br><br><br>
+    <main>
+        <div>
+            <form method="GET" action="">
+                <span id="loginbg" class="login-form">
+                                                                                
+                                                                                <strong> Enter Your Email </strong> 
+                                                                                 <input class="input" type="email" name="email" id="email" placeholder="email@gmail.com" required="required"><br>
+                                                                                 <strong>Enter your password</strong> 
+                                                                                 <input class="input" type="password" name="password" id="password" required="required"> <br>
+                                                                                 <button class="input" type="submit" value="login" >     login      </button>
+                </span>
+            </div>
+        </form>
+    <hr> <br><br><br>
+    <div>
+        <pre class="mid">
+            <img src="https://assets.website-files.com/5f204aba8e0f187e7fb85a87/5f210a533185e7434d9efcab_hero%20img.jpg" alt="img" title="haha" width="50%">
+            <p style="font-size:25px;">this is a nice image</p>
+            
+            
+        </pre>
+        
+    </div>
+    <hr>
+    
+    <div class="mid">
+        <span> 
+            <video controls="controls" poster="https://pbs.twimg.com/profile_images/1266516336307470337/whKFlh67_400x400.jpg" width="400px" muted="muted">
+                <source src="/videos/woman.mov" type="video/mov" />
+                nah fam
+                <!-- #t=5,10   start at 5 stop at 10 -->
+            </video>
+            <br>
+            <pre class="mid">
+<p style="font-size:25px; border-style: solid; border-width: 5px; border-color: azure; padding: 5px; border-radius: 20px; background-color: cornflowerblue;">this is a nice video</p>
+            </pre>
+
+        </span>
+    </div>
+
+    </main>
+    <hr>
+    <footer>
+        <br><br><br>
+        <div class="mid">
+            <span class="logos">
+                <a  href="https://discord.gg/8UPvPun" title="discord" target="_blank">
+                <img class="icon" src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" width="32" h eight="32" alt="discord"></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.twitter.com" title="Twitter" target="_blank">
+                <img class="icon"
+                 src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" width="32" height="32"  alt="twitter"></a>
+                &nbsp;&nbsp;&nbsp;
+                <a  href="https://youtube.com" title="youtube" target="_blank">
+                <img class="icon"
+                 src="https://www.freepnglogos.com/uploads/youtube-logo-icon-transparent---32.png" width="45" h eight="45" alt="youtube"></a>
+                &nbsp;&nbsp;&nbsp;
+                <a  href="https://instagram.com" title="instagram" target="_blank">
+                <img class="icon"
+                 src="/my.journy/FullStack/Frontend/files/images/5024278-download-insta-icon-instagram-png-image-with-no-background-instagram-icon-png-905_905_preview.png" width="32" height="32" alt="instagram"></a>
+                &nbsp;&nbsp;&nbsp;
+                <a  href="https://onlyfans.com" title="onlyfans" target="_blank">
+                <img class="icon"
+                 src="https://cdn.discordapp.com/attachments/405389869192577024/846050658507554876/5d07d38a014002ea.png" alt="onlyfans" title="نودز ابو بيرفكت" width="32" height="32"></a>
+                &nbsp;&nbsp;&nbsp;
+            </span>
+            <img src="" alt="">
+        </div>
+        <br><br><br>
+        
+        <div class="inline">
+
+        
+        <p class="inline" style="color: deepskyblue; font-size: 20px;"> 
+            <strong>
+                Abu-m8bl&copy;
+            </strong>
+            <i class="fa fa-apple" style="font-size: 20px;"></i>   
+            <div 
+                style="color: transparent;
+                font-size: 20px;
+                font-weight: 800;
+                font-family: cursive;
+                margin: 0 900px;
+                ">
+                fuck you
+            </div>
+        </p>
+    </div>
+    </footer>
+</body>
+</html>

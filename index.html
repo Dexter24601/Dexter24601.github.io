@@ -44,6 +44,19 @@
             top:80px;
         }
 
+        .imgstyle {
+            border-style: solid;
+            border-width: 5px;
+            border-color: skyblue;
+            border-radius: 15px;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+
+            
+        }
+        
+
 
         p {
 
@@ -113,6 +126,25 @@
         .password:hover,.password:focus {
         
             opacity: 90%;
+        }
+
+        .block {
+            border: solid 1px skyblue;
+            border-radius: 15px;
+            /* background-color: skyblue; */
+            background-image: url("https://assets.codepen.io/6859/internal/screenshots/pens/dwqIt.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1398183182&width=960");
+            background-size: 200px 200px;
+            width: 210px;
+            height: 210px;
+            position: relative;
+            bottom: 291px;
+            z-index: 2;
+        } 
+        .block:hover {
+
+            background-color: transparent;
+            border: transparent;
+            z-index: 0;
         }
 
         .button {
@@ -304,10 +336,9 @@ commodi veniam tempore veritatis? Deleniti maxime possimus est itaque corporis s
     <hr> <br><br><br>
     <div>
         <pre class="mid">
-            <img src="https://cdn.discordapp.com/attachments/572775017809707018/848652563565772840/838bd00a7c1096f448d55b70a7aa3c04.png" alt="img" title="haha" width="50%">
-            <p style="font-size:25px;">this is a nice image</p>
-            
-            
+            <img class="imgstyle" src="https://cdn.discordapp.com/attachments/572775017809707018/848652563565772840/838bd00a7c1096f448d55b70a7aa3c04.png" alt="img" title="haha" width="50%">
+            <p style="font-size:25px;">this is a nice image</p>       
+            <span class="block"></span>
         </pre>
         
     </div>

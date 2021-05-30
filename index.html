@@ -26,6 +26,18 @@
         <div>
         <style>
 
+        #wlc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 50px;
+            color: #fff;
+            background:mediumslateblue;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #fff;
+            border-width: 3px;
+        }
         .wlc{
 
             position: relative;
@@ -33,13 +45,14 @@
         }
 
 
-        p  {
+        p {
 
             font-family: cursive;
             font-size: 20px;
             font-weight: bolder;
             font-style: normal  ;
-            }
+        }
+
         body {
             background-color: darkslateblue;
         }
@@ -49,29 +62,95 @@
         }
 
         .login-form {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 50px 50px;
-         color: #fff;
-         background:mediumslateblue;
-         border-radius: 20px;
-         border-style: solid;
-         border-color: #fff;
-         border-width: 3px;
-      }
-      button{
-          size: 20px ;
-          background-color: rgb(0, 132, 255);
-          padding: 10px 20px;
-          font-size: 17px;
-          font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          font-weight: 700;
-      }
+        
+            display: flex;
+            flex-direction:inherit;
+            align-items: center;
+            border-style: solid;
+            border-width: 5px;
+            border-color: white;
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            margin: 0px auto 60px;
+            background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20201013/pngtree-street-outside-the-window-raining-background-image_404666.jpg");
+            background-repeat: no-repeat;
+        }
+        .username {
+            width: 100%;
+            border-style: solid;
+            border-width: 2px;
+            border-color: gray;
+            border-radius: 12px;
+            color:rgb(46, 144, 236);
+            padding: 5px;
+            font-size: 15px;
+            font-family: cursive;
+            background-color:rgb(255, 255, 255);
+            opacity: 70%;
+
+
+        }
+
+        .username:hover,.username:focus {
+        
+            opacity: 90%;
+        }
+
+        .password {
+            width: 100%;
+            border-style: solid;
+            border-width: 2px;
+            border-color: gray;
+            border-radius: 12px;
+            background-color: #fff;
+            color:rgb(46, 144, 236);
+            padding: 5px;
+            font-size: 15px;
+            font-family: cursive;
+            opacity: 70%;
+        }
+        .password:hover,.password:focus {
+        
+            opacity: 90%;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 85px;
+            /* size: 40px; */
+            border-style: solid;
+            border-width: 2px;
+            border-color: gray;
+            border-radius: 12px;
+            padding: 5px 10px;
+            font-size: 15px;
+        
+
+        }
+
+        .button:hover {
+            background-color: steelblue;
+        }
+
+        .h3 {
+            margin: 5px;
+        }
+
+        form {
+            padding-left: 150px;
+        }
+      
       .mid {
+            
           display: flex;
           flex-direction: column;
           align-items: center;  
+          
+
       }
        
       .searchbar {
@@ -132,6 +211,7 @@
       }
 
       .icon:hover {
+          transition: 200ms;
           width: 64px;
           height: 64px;
       }
@@ -171,7 +251,7 @@
     <div>
             <div class="space">
                 <h1 style="font-family: cursive ,'Arial Narrow', Arial; font-size: 40px;">
-                                                                        <strong class="login-form wlc">    Welcome!</strong>
+                                                                        <strong class="wlc" id="wlc">    Welcome!</strong>
                 </h1>
             </div>
             <div class=""> 
@@ -198,17 +278,28 @@ commodi veniam tempore veritatis? Deleniti maxime possimus est itaque corporis s
     </header>
 <hr> <br><br><br>
     <main>
-        <div>
-            <form method="GET" action="">
-                <span id="loginbg" class="login-form">
-                                                                                
-                                                                                <strong> Enter Your Email </strong> 
-                                                                                 <input class="input" type="email" name="email" id="email" placeholder="email@gmail.com" required="required"><br>
-                                                                                 <strong>Enter your password</strong> 
-                                                                                 <input class="input" type="password" name="password" id="password" required="required"> <br>
-                                                                                 <button class="input" type="submit" value="login" >     login      </button>
-                </span>
-            </div>
+        <span class="login-form">
+            <form method="GET" action="/my.journy/FullStack/Frontend/HTML/Dexter.html" target="_blank" >
+                <h2 class="head">Login</h2>
+                <div>
+                    <h4 class="h3" >Username:</h4>
+                    <input class="username" type="text">
+    
+                </div>
+                <br>
+                <div>
+                    <h4 class="h3">Password:</h4>
+                    <input class="password" type="password" name="" id="">
+    
+    
+                </div>
+                <div>
+    
+                    <button class="button" type="submit">Enter</button>
+    
+                </div>
+            </form>
+        </span>
         </form>
     <hr> <br><br><br>
     <div>
@@ -225,14 +316,14 @@ commodi veniam tempore veritatis? Deleniti maxime possimus est itaque corporis s
     <div class="mid">
         <span> 
             <video controls="controls" poster="https://pbs.twimg.com/profile_images/1266516336307470337/whKFlh67_400x400.jpg" width="400px" muted="muted">
-                <source src="/videos/woman.mov" type="video/mov" />
+                <source src="/videos/كاهيل.mp4" type="video/mp4"/>
                 nah fam
                 <!-- #t=5,10   start at 5 stop at 10 -->
             </video>
             <br>
-            <pre class="mid">
+            <div class="mid">
 <p style="font-size:25px; border-style: solid; border-width: 5px; border-color: azure; padding: 5px; border-radius: 20px; background-color: cornflowerblue;">this is a nice video</p>
-            </pre>
+            </div>
 
         </span>
     </div>

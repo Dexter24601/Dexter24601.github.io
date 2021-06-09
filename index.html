@@ -1,413 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <configuration>
-        <system.webServer>
-            <staticContent>
-                <mimeMap fileExtension=".mp4" mimeType="video/mp4" />                   
-            </staticContent>
-         </system.webServer>
-    </configuration>
     <div>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Twitter</title>
     </div>
     <div>
 
-        <title>Dexter - main</title>
+        <link rel="icon" type="image.icon" href="https://abs.twimg.com/favicons/twitter.ico">
+        
+    <link rel="stylesheet" type="text/css" href="/my.journy/FullStack/Frontend/CSS/Fullystyled.css">
+    <script src="https://kit.fontawesome.com/3f311bfd4e.js" crossorigin="anonymous"></script>
 
     </div>
-    <div>
-        <!-- <link rel="stylesheet" type="text/css" href="/my.journy/FullStack/Frontend/CSS/dexter_style.css"> -->
-        <link rel="icon" type="image/png" href="https://cdn.iconscout.com/icon/premium/png-512-thumb/dexter-563897.png" sizes="32*32"> 
-        <script src="https://kit.fontawesome.com/3f311bfd4e.js" crossorigin="anonymous"></script>
-
-        <div>
-        <style>
-
-        #wlc {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 50px;
-            color: #fff;
-            background:mediumslateblue;
-            border-radius: 20px;
-            border-style: solid;
-            border-color: #fff;
-            border-width: 3px;
-        }
-        .wlc{
-
-            position: relative;
-            top:80px;
-        }
-
-        .imgstyle {
-            border-style: solid;
-            border-width: 5px;
-            border-color: skyblue;
-            border-radius: 15px;
-            width: 200px;
-            height: 200px;
-            z-index: 1;
-
-            
-        }
-        
-
-
-        p {
-
-            font-family: cursive;
-            font-size: 20px;
-            font-weight: bolder;
-            font-style: normal  ;
-        }
-
-        body {
-            background-color: darkslateblue;
-        }
-
-        .space {
-            margin-bottom: 120px;
-        }
-
-        .login-form {
-        
-            display: flex;
-            flex-direction:inherit;
-            align-items: center;
-            border-style: solid;
-            border-width: 5px;
-            border-color: white;
-            border-radius: 10px;
-            width: 500px;
-            height: 500px;
-            margin: 0px auto 60px;
-            background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20201013/pngtree-street-outside-the-window-raining-background-image_404666.jpg");
-            background-repeat: no-repeat;
-        }
-        .username {
-            width: 100%;
-            border-style: solid;
-            border-width: 2px;
-            border-color: gray;
-            border-radius: 12px;
-            color:rgb(46, 144, 236);
-            padding: 5px;
-            font-size: 15px;
-            font-family: cursive;
-            background-color:rgb(255, 255, 255);
-            opacity: 70%;
-
-
-        }
-
-        .username:hover,.username:focus {
-        
-            opacity: 90%;
-        }
-
-        .password {
-            width: 100%;
-            border-style: solid;
-            border-width: 2px;
-            border-color: gray;
-            border-radius: 12px;
-            background-color: #fff;
-            color:rgb(46, 144, 236);
-            padding: 5px;
-            font-size: 15px;
-            font-family: cursive;
-            opacity: 70%;
-        }
-        .password:hover,.password:focus {
-        
-            opacity: 90%;
-        }
-
-        .block {
-            border: solid 1px skyblue;
-            border-radius: 15px;
-            /* background-color: skyblue; */
-            background-image: url("https://assets.codepen.io/6859/internal/screenshots/pens/dwqIt.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1398183182&width=960");
-            background-size: 200px 200px;
-            width: 210px;
-            height: 210px;
-            position: relative;
-            bottom: 291px;
-            z-index: 2;
-        } 
-        .block:hover {
-
-            background-color: transparent;
-            border: transparent;
-            z-index: 0;
-        }
-
-        .button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            margin-left: 85px;
-            /* size: 40px; */
-            border-style: solid;
-            border-width: 2px;
-            border-color: gray;
-            border-radius: 12px;
-            padding: 5px 10px;
-            font-size: 15px;
-        
-
-        }
-
-        .button:hover {
-            background-color: steelblue;
-        }
-
-        .h3 {
-            margin: 5px;
-        }
-
-        form {
-            padding-left: 150px;
-        }
-      
-      .mid {
-            
-          display: flex;
-          flex-direction: column;
-          align-items: center;  
-          
-
-      }
-       
-      .searchbar {
-        border-style: solid;
-        border-width: 3px;
-        border-color: gray;
-        border-radius: 20px;
-        padding: 5px 100px 5px 10px;
-        margin: 0px 100px 0px 100px;
-        font-family: cursive;
-        font-size: 20px;
-        width: 80%;
-        position: fixed;
-        top: 10px;
-
-    }
-
-    .searchbutton {
-       display:inline-block;
-        margin-left: -155px;
-        margin-top: 20px;
-        /* position: relative; */
-        /* height: 64px;
-        width: 64px; */
-        background-color:  transparent;
-        align-items: center;
-        color: #000;
-       border-style: solid;
-        border-radius: 20px;
-        border-color:transparent;  
-        padding: 13px; 
-        position: fixed;
-        left: 2030px;
-        top: -14px;
-
-            
-    }
-    /* .searchbar ,.searchbutton {
-        position:fixed;
-    } */
-
-    .searchbutton:hover{
-        
-        
-        color:rgb(0, 132, 255);
-    }
-
-    .searchbutton:active{
-        
-        color:rgb(0, 192, 220);
-    }
-      #loginbg {
-    background-image: url("https://www.dodea.edu/Offices/IT/images/geometric-blue-header.jpg");
-    }   
-      
-      .logos {
-        display: inline 
-      }
-
-      .icon:hover {
-          transition: 200ms;
-          width: 64px;
-          height: 64px;
-      }
-      footer {
-          background-color: mediumslateblue;
-      }
-      .input {
-        border-radius: 20px;
-        border-style: solid;
-       border-color:dimgray;
-       border-width: 2px;
-      }
-      .inline {
-          display: inline-flex;
-      }
-      .link {
-          color: aqua;
-      }
-      .link:hover {
-        color: blue;
-      }
-      .link:visited {
-          color: crimson;
-      }
-      .link:active {
-          color: steelblue;
-      }
-        </style>
-    </div>
-    
 
 </head>
-
 <body>
-    <header>
+    <span class="inline">
 
+    
+        <div class="warning"> <img  src="http://assets.stickpng.com/images/5a81af7d9123fa7bcc9b0793.png"  alt="warning" width="32" height="32" title="fuck yourself"></div>
+        <div-* > <a href="https://www.google.com/maps/place/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9+%D8%B1%D9%82%D9%85+4+Gate+no.4%E2%80%AD/@21.2276986,40.4266353,18.32z/data=!4m13!1m7!3m6!1s0x15e98eeec10640f5:0xaa2b760d6c01855d!2z2K3Yr9mK2YLYqSDYp9mE2LHYr9mBIDLYjCBTaGVoYXIsIEFsIFNhZGFkLCBBdCBUYWlmIDI2NTE0!3b1!8m2!3d21.2430124!4d40.4174405!3m4!1s0x15e98f9342cf0d7b:0xe2aecc22418bbed6!8m2!3d21.2268824!4d40.428687" target="_blank"><img class="ball" src="/Pictures/volleyball.png"  alt="vollyball!" width="32" height="32" title="الخميس طايرة"></a> </div>
+    </span>
+        <span class="border">
+        Welcome   
+    </span>
+    <br>
+    <hr>
+    <div class="dborder">
+         How you doin?
+    </div>
+
+    <span>
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet exercitationem molestias sed? Esse tempore quisquam eveniet accusantium ratione quam cumque ea labore? Quo adipisci cupiditate reprehenderit quidem, quisquam illo aspernatur?</p>
+    </span>
+   
+    <br><hr><br>
+    <div class="parent">
+        <div class="child">
+            <img src="/Pictures/838bd00a7c1096f448d55b70a7aa3c04.png" alt="anus" height="100" width="100">
+        </div>
+    </div>
+    <br><br>
     <div>
-            <div class="space">
-                <h1 style="font-family: cursive ,'Arial Narrow', Arial; font-size: 40px;">
-                                                                        <strong class="wlc" id="wlc">    Welcome!</strong>
-                </h1>
-            </div>
-            <div class=""> 
+        <pre class="center shadow card"><span class="yoda" title="baby yoda"></span>     Abu m8bl</pre> 
 
-                <input class="searchbar"  type="text" placeholder="What are you looking for?" title="search" name="search"> 
-               
-                <button type="submit" class="searchbutton"> 
-                    <i class="fa fa-search"></i>
-                
-                </button>
-            </div>
-            <br><br><br>
-                <hr>
-                <h2 style="font-size: 27px; color: gray;"> <strong>
-introduction: </strong></h2>
-<p > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid praesentium repudiandae porro quidem, 
-commodi veniam tempore veritatis? Deleniti maxime possimus est itaque corporis suscipit? Soluta inventore quas nulla explicabo consequuntur.
-               <br>
-               <a class="link" href="https://www.xdexter.000webhostapp.com" target="_blank">https://www.xdexter.000webhostapp.com</a>
+        <!-- <span class="yoda" title="baby yoda"></span> -->
+            
+        </span>    
+    </div>
+    
+    <br><br>
+    <hr>
+    <div>
+        <video style="float:left; margin-right: 100px;" controls="controls">
+            <source src="/my.journy/FullStack/Frontend/files/كاهيل.mp4">
+        </video>
+    </div>
+   <div class="login-form">
+        <form method="GET" action="/my.journy/FullStack/Frontend/HTML/Dexter.html" target="_blank" >
+            <h2 class="head">Login</h2>
+            <div>
+                <h4 class="h3" >Username:</h4>
+                <input class="username" type="text">
 
-</p>
-                <br>
-        </div>    
-    </header>
-<hr> <br><br><br>
-    <main>
-        <span class="login-form">
-            <form method="GET" action="http://xdexter.me/" target="_blank" >
-                <h2 class="head">Login</h2>
-                <div>
-                    <h4 class="h3" >Username:</h4>
-                    <input class="username" type="text" required="required" minlength="3">
-    
-                </div>
-                <br>
-                <div>
-                    <h4 class="h3">Password:</h4>
-                    <input class="password" type="password" name="password" required="required" minlength="8" maxlength="20">
-    
-    
-                </div>
-                <div>
-    
-                    <button class="button" type="submit">Enter</button>
-    
-                </div>
-            </form>
-        </span>
+            </div>
+            <br>
+            <div>
+                <h4 class="h3">Password:</h4>
+                <input class="password" type="password" name="" id="">
+
+
+            </div>
+            <div>
+
+                <button class="button" type="submit">Enter</button>
+
+            </div>
         </form>
-    <hr> <br><br><br>
+   </div>
+
+
+
+    <br><br><br><br><br><br><br>   
+    <div class="grandfather">
+        <div class="father">
+            <div class="son1">
+                hello
+            </div>
+        </div>
+        <div class="father">
+            <div class="son2">
+                hello
+            </div>
+        </div>
+        <div class="father">
+            <div class="son3">
+                hello
+            </div>
+        </div>
+    </div>
+    
     <div>
         <pre class="mid">
             <img class="imgstyle" src="https://cdn.discordapp.com/attachments/572775017809707018/848652563565772840/838bd00a7c1096f448d55b70a7aa3c04.png" alt="img" title="haha" width="50%">
-            <p style="font-size:25px;">this is a nice image</p>       
+            <p class="deco">anas is beautiful</p>       
             <span class="block"></span>
         </pre>
         
     </div>
-    <hr>
-    
-    <div class="mid">
-        <span> 
-            <video controls="controls" poster="https://pbs.twimg.com/profile_images/1266516336307470337/whKFlh67_400x400.jpg" width="400px" muted="muted">
-                <source src="/videos/كاهيل.mp4" type="video/mp4"/>
-                nah fam
-                <!-- #t=5,10   start at 5 stop at 10 -->
-            </video>
+    <br><br><br>
+    <div class="side">
+        <div class="">
+            <a  href="https://discord.gg/8UPvPun" title="discord" target="_blank">
+            <img class="icon" src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" width="32" h eight="32" alt="discord"></a>
             <br>
-            <div class="mid">
-<p style="font-size:25px; border-style: solid; border-width: 5px; border-color: azure; padding: 5px; border-radius: 20px; background-color: cornflowerblue;">this is a nice video</p>
-            </div>
-
-        </span>
-    </div>
-
-    </main>
-    <hr>
-    <footer>
-        <br><br><br>
-        <div class="mid">
-            <span class="logos">
-                <a  href="https://discord.gg/8UPvPun" title="discord" target="_blank">
-                <img class="icon" src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" width="32" h eight="32" alt="discord"></a>
-                &nbsp;&nbsp;&nbsp;
-                <a href="https://www.twitter.com" title="Twitter" target="_blank">
-                <img class="icon"
-                 src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" width="32" height="32"  alt="twitter"></a>
-                &nbsp;&nbsp;&nbsp;
-                <a  href="https://www.youtube.com/user/3bo0oD200" title="youtube" target="_blank">
-                <img class="icon"
-                 src="https://www.freepnglogos.com/uploads/youtube-logo-icon-transparent---32.png" width="45" h eight="45" alt="youtube"></a>
-                &nbsp;&nbsp;&nbsp;
-                <a  href="https://www.instagram.com/abu.m8bl/" title="instagram" target="_blank">
-                <img class="icon"
-                 src="https://i.dlpng.com/static/png/5024278-download-insta-icon-instagram-png-image-with-no-background-instagram-icon-png-905_905_preview.png" width="32" height="32" alt="instagram"></a>
-                &nbsp;&nbsp;&nbsp;
-                <a  href="https://onlyfans.com" title="onlyfans" target="_blank">
-                <img class="icon"
-                 src="https://cdn.discordapp.com/attachments/405389869192577024/846050658507554876/5d07d38a014002ea.png" alt="onlyfans" title="نودز ابو بيرفكت" width="32" height="32"></a>
-                &nbsp;&nbsp;&nbsp;
-            </span>
-            <img src="" alt="">
+            <a href="https://www.twitter.com" title="Twitter" target="_blank">
+            <img class="icon"
+             src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png" width="32" height="32"  alt="twitter"></a>
+            <br>
+            <a  href="https://www.youtube.com/user/3bo0oD200" title="youtube" target="_blank">
+            <img class="icon"
+             src="https://www.freepnglogos.com/uploads/youtube-logo-icon-transparent---32.png" width="45" h eight="45" alt="youtube"></a>
+            <br>
+            <a  href="https://www.instagram.com/abu.m8bl/" title="instagram" target="_blank">
+            <img class="icon"
+             src="https://i.dlpng.com/static/png/5024278-download-insta-icon-instagram-png-image-with-no-background-instagram-icon-png-905_905_preview.png" width="32" height="32" alt="instagram"></a>
+            <br>
+            <a  href="https://onlyfans.com" title="onlyfans" target="_blank">
+            <img class="icon"
+             src="https://cdn.discordapp.com/attachments/405389869192577024/846050658507554876/5d07d38a014002ea.png" alt="onlyfans" title="نودز ابو بيرفكت" width="32" height="32"></a>
+            <br>
         </div>
-        <br><br><br>
-        
-        <div class="inline">
-
-        
-        <p class="inline" style="color: deepskyblue; font-size: 20px;"> 
-            <strong>
-                Abu-m8bl&copy;
-            </strong>
-            <i class="fa fa-apple" style="font-size: 20px;"></i>   
-            <div 
-                style="color: transparent;
-                font-size: 20px;
-                font-weight: 800;
-                font-family: cursive;
-                margin: 0 900px;
-                ">
-                fuck you
-            </div>
-        </p>
+        <img src="" alt="">
     </div>
-    </footer>
+    <div class="anime">
+        <h3>GAY</h3>
+    </div>
+    <br><hr><br><br>
+    <aside>
+        <form action="http://www.xdexter.me" method="GET" target="_blank">
+
+            <h3>Username</h><br>
+            <input class="input" type="text" name="Username" placeholder="Anas" required="required">
+            <h3>Password</h> <br>
+            <input class="input" type="password" name="password2" required="required" minlength="8"> <br><br>
+            <button id="btn" type="submit">Login</button>
+            <div>
+                <a href="http://www.xdexter.me" target="_blank">continue as a guest!</a>
+                <a href="/register">Register</a>
+            </div>
+        </form>
+
+    </aside>
+    <div>
+        <h1> overflow scroll:</h1>
+        <hr><br><br>
+    </div>
+     <div class="div">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        
+        1914 translation by H. Rackham
+        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+        
+        Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+        
+        1914 translation by H. Rackham
+        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."    
+    
+    </div>
+    <div>
+        <h1> overflow auto:</h1>
+        <hr><br><br>
+    </div>
+     <div class="div1">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        
+        1914 translation by H. Rackham
+        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+        
+        Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+        
+        1914 translation by H. Rackham
+        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."    
+    <br><br><br>
+    </div>
+
+    <div>
+        <h1> overflow hidden:</h1>
+        <hr><br><br>
+    </div>
+    <div class="div2">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+        Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        
+        1914 translation by H. Rackham
+        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+        
+        Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+        
+        1914 translation by H. Rackham
+        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."    
+    <br><br><br>
+    </div>
+    <div class="japanese">
+        
+       <a
+        id="coco"
+       href="https://www.youtube.com/watch?v=tLyRpGKWXRs" target="_blank">つづく</a> 
+
+    </div>
 </body>
 </html>
